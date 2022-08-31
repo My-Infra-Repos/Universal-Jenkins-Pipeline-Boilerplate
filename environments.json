@@ -1,0 +1,137 @@
+{
+  "auto_deploy_branch_targets" : {
+      "development": ["development"],
+      "sandbox": ["sandbox"],
+      "staging": ["staging"],
+      "uat": ["uat"],
+      "production": ["production"]
+  },
+  "auto_deploy_test_targets" : {
+      "development": ["development"],
+      "sandbox": ["sandbox"],
+      "staging": ["staging"],
+      "uat": ["uat"],
+      "production": ["production"]
+  },
+  "build_dir": "build",
+  "default_branch" : "develop",
+  "default_target" : "development",
+  "image" : "Your-Application-Name-application-service",
+  "namespace" : "default",
+  "registry_url": "jfafn.jfrog.io",
+  "virtual_registry_repo": "registry-repo-name-container",
+  "target" : {
+      "sandbox" : {
+          "account" : "YOURAWSACCOUNT",
+          "cluster_name" : "CLUSTERNAME_THIS ENVIRONMENT",
+          "replica_count": "1",
+          "domain_name" : "pwb-egg.DOMAIN_NAME__FOR_THIS_ENVIRONMENT",
+          "service_account_name" : "application-service-sandbox-eks",
+          "origin_domain_name" : "DOMAIN_NAME__FOR_THIS_ENVIRONMENT",
+          "api_domain_name" : "backend.DOMAIN_NAME__FOR_THIS_ENVIRONMENT",
+          "api_origin_domain_name" : "DOMAIN_NAME__FOR_THIS_ENVIRONMENT",
+          "full_name_override": "Your-Application-Name-sndb-mern-stack-setup-sandbox-server",
+          "sns_topic": "SNS_TOPIC_NAME__FOR_THIS_ENVIRONMENT",
+          "sns_topic_arn": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:SNS_TOPIC_NAME__FOR_THIS_ENVIRONMENT",
+          "sqs_queue_in": "sqs_in_name_for_this_environment",
+          "sqs_queue_url_in": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/sqs_in_name_for_this_environment",
+          "sqs_queue_out": "SQS_OUT_NAME_FOR_THIS_ENVIRONMENT",
+          "sqs_queue_url_out": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/SQS_OUT_NAME_FOR_THIS_ENVIRONMENT"
+      },
+      "staging" : {
+          "account" : "YOURAWSACCOUNT",
+          "cluster_name" : "CLUSTERNAME_THIS ENVIRONMENT",
+          "replica_count": "1",
+          "domain_name" : "pwb-egg.domain_name_for_this_environment",
+          "service_account_name" : "application-service-staging-eks",
+          "origin_domain_name" : "domain_name_for_this_environment",
+          "api_domain_name" : "backend.domain_name_for_this_environment",
+          "api_origin_domain_name" : "domain_name_for_this_environment",
+          "full_name_override": "Your-Application-Name-staging-server",
+          "sns_topic": "sns-topic-this-environment-name-stg-mule-out-ue1-all",
+          "sns_topic_arn": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-this-environment-name-stg-mule-out-ue1-all",
+          "sns_topic_arn_current_policy": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-this-environment-name-stg-mule-out-current-policy-ue1-all",
+          "sns_topic_arn_test": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-this-environment-name-stg-mule-out-test-ue1-all",
+          "sqs_queue_out": "SQS_OUT_NAME_FOR_THIS_ENVIRONMENT",
+          "sqs_queue_url_out": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/SQS_OUT_NAME_FOR_THIS_ENVIRONMENT",
+          "sqs_queue_in": "sqs_in_name_for_this_environment",
+          "sqs_queue_url_in": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/sqs_in_name_for_this_environment"
+      },
+      "development" : {
+          "account" : "YOURAWSACCOUNT",
+          "cluster_name" : "ocld-eks-dev-main-ue1-all",
+          "replica_count": "1",
+          "domain_name" : "pwb-egg.domain_name_for_this_environment",
+          "service_account_name" : "application-service-development-eks",
+          "origin_domain_name" : "domain_name_for_this_environment",
+          "api_domain_name" : "backend.domain_name_for_this_environment",
+          "api_origin_domain_name" : "domain_name_for_this_environment",
+          "full_name_override": "Your-Application-Name-development-server",
+          "sns_topic": "sns-topic-this-environment-name-dev-mule-out-ue1-all",
+          "sns_topic_arn": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-this-environment-name-dev-mule-out-ue1-all",
+          "sns_topic_arn_current_policy": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-this-environment-name-dev-mule-out-current-policy-ue1-all",
+          "sns_topic_arn_test": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-this-environment-name-dev-mule-out-test-ue1-all",
+          "sqs_queue_in": "sqs_in_name_for_this_environment",
+          "sqs_queue_url_in": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/sqs_in_name_for_this_environment",
+          "sqs_queue_out": "sqs_out_name_for_this_environment",
+          "sqs_queue_url_out": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/sqs_out_name_for_this_environment"
+      },
+      "uat" : {
+          "account" : "YOURAWSACCOUNT",
+          "cluster_name" : "oclu-eks-uat-main-ue1-all",
+          "replica_count": "1",
+          "domain_name" : "pwb-egg.domain_name_for_this_environment",
+          "service_account_name" : "application-service-uat-eks",
+          "origin_domain_name" : "domain_name_for_this_environment",
+          "api_domain_name" : "backend.domain_name_for_this_environment",
+          "api_origin_domain_name" : "domain_name_for_this_environment",
+          "full_name_override": "Your-Application-Name-uat-server",
+          "sns_topic": "sns-topic-this-environment-name-uat-mule-out-ue1-all",
+          "sns_topic_arn": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-this-environment-name-uat-mule-out-ue1-all",
+          "sns_topic_arn_current_policy": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-this-environment-name-uat-mule-out-current-policy-ue1-all",
+          "sns_topic_arn_test": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-this-environment-name-uat-mule-out-test-ue1-all",
+          "sqs_queue_in": "sqs_in_name_for_this_environment",
+          "sqs_queue_url_in": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/sqs_in_name_for_this_environment",
+          "sqs_queue_out": "sqs_out_name_for_this_environment",
+          "sqs_queue_url_out": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/sqs_out_name_for_this_environment"
+      },
+      "production" : {
+          "account" : "YOURAWSACCOUNT",
+          "cluster_name" : "oclp-eks-prod-main-ue1-all",
+          "replica_count": "1",
+          "domain_name" : "egg.domain_name_for_this_environment",
+          "service_account_name" : "application-service-prod-eks",
+          "origin_domain_name" : "domain_name_for_this_environment",
+          "api_domain_name" : "backend.domain_name_for_this_environment",
+          "api_origin_domain_name" : "domain_name_for_this_environment",
+          "full_name_override": "Your-Application-Name-prod-server",
+          "sns_topic": "sns-topic-prod-mule-out-ue1-all",
+          "sns_topic_arn": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-prod-mule-out-ue1-all",
+          "sns_topic_arn_current_policy": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-prod-mule-out-current-policy-ue1-all",
+          "sns_topic_arn_test": "arn:aws:sns:us-east-1:YOURAWSACCOUNT:sns-topic-prod-mule-out-test-ue1-all",
+          "sqs_queue_in": "sqs_in_name_for_this_environment",
+          "sqs_queue_url_in": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/sqs_in_name_for_this_environment",
+          "sqs_queue_out": "sqs_out_name_for_this_environment",
+          "sqs_queue_url_out": "https://sqs.us-east-1.amazonaws.com/YOURAWSACCOUNT/sqs_out_name_for_this_environment"
+      }
+  },
+  "sonar_qube_config": {
+    "image": "sonarsource/sonar-scanner-cli:4.6",
+    "project_base_dir": ".",
+    "project_key": "YOURAPPLICATIONNAME:appdev:Your-Application-Name-ssc-client",
+    "project_name": "Your-Application-Name-ssc-client",
+    "source": ".",
+    "target": {
+      "development": {
+        "endpoint": "",
+        "token_name": "SQ_YOURAPPLICATIONNAME_SCANNER_TERRAFORM_DEV",
+        "environment": "sonarqube-dev"
+      },
+      "production": {
+        "endpoint": "https://sonarqube.your-organization.cloud",
+        "token_name": "SQ_YOURAPPLICATIONNAME_SCANNER_TERRAFORM_PROD",
+        "environment": "sonarqube-prod"
+      }
+    }
+  }
+}
